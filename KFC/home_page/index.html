@@ -1,123 +1,211 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>home page</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="top-container">
-      <h1 class="logo"><a href="../home_page/index.html">KFC</a></h1>
-      <h1 class="top-button"><a href="../menu/menu.html">MENU</a></h1>
-      <h1 class="top-button">ORDER</h1>
-      <h1 class="top-button">GALLERY</h1>
-      <h1 class="top-button">LOCATIONS</h1>
-      <h1 class="top-button">ABOUT US</h1>
-      <h1 class="top-button" id="sign-in">sign-in</h1>
-    </div>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <div class="mid-container">
-        <div class="carousel-container">
-          <div class="carousel-track">
-            
-            <div class="slide">
-              <div class="slide-content">
-                <h1>CHICKEN FILLET ZINGER MEAL</h1>
-                <p>A spicy, crispy chicken fillet served with warm rice, rich savory gravy, and your choice of refreshing drink.</p>
-              </div>
-              <div class="slide-image">
-                <img src="../images/featureditem1.png" alt="Chicken Fillet Zinger Meal">
-              </div>
-            </div>
+body {
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: 200vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+    overflow-x:hidden;
+}
+.top-container {
+    background-color: #E4002B; 
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top:0;
+    height:65px;
+    z-index:1000;
+    justify-content: space-between;
+    padding: 12px 40px;
+    box-shadow: 0 4px 12px; 
+}
 
-            <div class="slide">
-              <div class="slide-content">
-                <h1>ZINGER BURGER</h1>
-                <p>A crunchy, spicy zinger chicken fillet topped with fresh lettuce and creamy mayo on a toasted sesame seed bun.</p>
-              </div>
-              <div class="slide-image">
-                <img src="../images/featureditem2.png" alt="Zinger Burger">
-              </div>
-            </div>
+.logo a{
+    font-family: 'Impact';
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
 
-            <div class="slide">
-              <div class="slide-content">
-                <h1>FAMOUS BOWL SUPER PLATTER</h1>
-                <p>A large, shareable version of KFC's signature comfort food layering. It combines crispy chicken bites, mashed potatoes, sweet corn, and savory gravy.</p>
-              </div>
-              <div class="slide-image">
-                <img src="../images/featureditem3.png" alt="Crunch Bowl">
-              </div>
-            </div>
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
 
-            <div class="slide">
-              <div class="slide-content">
-                <h1>FAMILY BUCKET MEAL</h1>
-                <p>Perfect for sharing! Features our signature crispy chicken bucket paired with large, creamy mashed potato and fixins.</p>
-              </div>
-              <div class="slide-image">
-                <img src="../images/featureditem4.png" alt="Family Meal Bucket">
-              </div>
-            </div>
+.nav-link:hover {
+    background-color: rgba(48, 1, 1, 0.15); /* Soft highlight on hover */
+}
 
-          </div>
+.nav-link.active {
+    background-color: rgba(0, 0, 0, 0.2); /* Gives active page visual depth */
+}
 
-          <button class="nav-btn prev">&#10094;</button>
-          <button class="nav-btn next">&#10095;</button>
+.btn-signin {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
 
-          <div class="dots-container">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
-          </div>
-        </div>
-    </div>
+.btn-signin:hover {
+    background-color: #ffffff;
+    color: #E4002B;
+}
+.mid-container {
+    min-height: 100vh;
+    background-image:url(../images/bg2.jpg)
+}
+.carousel-container {
+    position: relative;
+    top:0;
+    width: 100%;
+    min-height: 65vh;
+    background-color:black;
+    opacity:0.9;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding:0 50px 50px 50px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+}
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
 
-  <footer class="bottom-container">
-  <div class="footer-content">
-    <div class="footer-col">
-      <h2 class="footer-logo">KFC</h2>
-      <p class="footer-desc">Finger Lickin' Good fried chicken, delivered right to your doorstep.</p>
-    </div>
+.slide-content {
+    color:white;
+    font-size:1.8em;
+    max-width: 50%;
+    margin-left:30px;
+}
 
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="../menu/menu.html">Menu</a></li>
-        <li><a href="#">Order Now</a></li>
-        <li><a href="#">Promos & Deals</a></li>
-        <li><a href="#">Find a Store</a></li>
-      </ul>
-    </div>
+.slide-image img {
+    max-width: 100%;
+    height: auto;
+}
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+.prev { 
+    left: 20px; 
+}
+.next { 
+    right: 20px;
+}
+.dots-container {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
 
-    <div class="footer-col">
-      <h3>Customer Support</h3>
-      <ul>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-      </ul>
-    </div>
+.dot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    <div class="footer-col">
-      <h3>Connect With Us</h3>
-      <div class="social-links">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-      </div>
-      <p class="hotline">Hotline: 8882-8888</p>
-    </div>
-  </div>
+.dot.active {
+    background-color: #fff;
+}
+.bottom-container {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 40px 10%;
+  font-family: sans-serif;
+}
 
-  <div class="footer-bottom">
-    <p>&copy; 2026 KFC Philippines. All rights reserved.</p>
-  </div>
-</footer>
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 30px;
+}
 
-    <script src="./script.js"></script>
-  </body>
-</html>
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  color: #e4002b;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  color: #888888;
+  font-size: 0.9rem;
+}
