@@ -12,60 +12,69 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 120vh;
-    max-width: fit-content;
-
+    overflow-x:hidden;
 }
 .top-container {
-    max-height: 100px;
-    height: 100px;
-    width: 200vh;
-    margin: -9px;
-    background-color: #e4002b;
-    position: sticky;
-    top: 0;
-    left:10px;
+    background-color: #E4002B; 
     display: flex;
-    flex-direction: row;
     align-items: center;
-    overflow: hidden;
-    box-shadow: rgb(28, 24, 24) 5px 5px 5px;
-    gap: 10px;
-    z-index:9999;
+    position:sticky;
+    top:0;
+    height:65px;
+    z-index:1000;
+    justify-content: space-between;
+    padding: 12px 40px;
+    box-shadow: 0 4px 12px; 
 }
-a{
-    color:inherit;
-    text-decoration:none;
+
+.logo a{
+    font-family: 'Impact';
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
-.logo {
-    font-size: 80px;
-    position: relative;
-    left:10px;
-    margin: 1px;
-    margin-right: 20px;
-    margin-left: 10px;
-}
-.top-button {
+
+.top-nav {
+    display: flex;
     align-items: center;
-    padding: 50px 0px 50px;
-    margin: 0px 10px 0px 10px;
+    gap: 34px;
 }
-.top-button:hover {
-    color: rgb(255, 255, 255);
-    opacity: 40%;
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
-#sign-in {
-    size: 100px;
-    margin-left: 30px;
-    padding: 10px 15px 15px 15px;
-    border-width: 2px;
-    border-radius: 1000%;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
+
+.nav-link:hover {
+    background-color: rgba(48, 1, 1, 0.15); /* Soft highlight on hover */
 }
-#sign-in:hover {
-    opacity: 50%;
-    background-color: aliceblue;
-    color: rgb(50, 4, 4);
+
+.nav-link.active {
+    background-color: rgba(0, 0, 0, 0.2); /* Gives active page visual depth */
+}
+
+.btn-signin {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-signin:hover {
+    background-color: #ffffff;
+    color: #E4002B;
 }
 .mid-container {
     min-height: 100vh;
