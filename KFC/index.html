@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-container">
+      <div class="logo">
+        <a href="../home_page/index.html">KFC</a>
+      </div>
+      <nav class="top-nav">
+        <a href="../menu/menu.html" class="nav-link">MENU</a>
+        <a href="../order/order.html" class="nav-link">ORDER</a>
+        <a href="#" class="nav-link">GALLERY</a>
+        <a href="../order/location.html" class="nav-link">LOCATIONS</a>
+        <a href="#" class="nav-link">ABOUT US</a>
+        <a href="../sign_in/sign_in.html" class="btn-signin">Sign In</a>
+      </nav>
+    </header>
+
+    <div class="mid-container">
+      <!-- HERO CAROUSEL -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="slide">
+            <div class="slide-content">
+              <h1>CHICKEN FILLET ZINGER MEAL</h1>
+              <p>A spicy, crispy chicken fillet served with warm rice, rich savory gravy, and your choice of refreshing drink.</p>
+            </div>
+            <div class="slide-image">
+              <img src="../images/featureditem1.png" alt="Chicken Fillet Zinger Meal">
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-content">
+              <h1>ZINGER BURGER</h1>
+              <p>A crunchy, spicy zinger chicken fillet topped with fresh lettuce and creamy mayo on a toasted sesame seed bun.</p>
+            </div>
+            <div class="slide-image">
+              <img src="../images/featureditem2.png" alt="Zinger Burger">
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-content">
+              <h1>FAMOUS BOWL SUPER PLATTER</h1>
+              <p>A large, shareable version of KFC's signature comfort food layering. It combines crispy chicken bites, mashed potatoes, sweet corn, and savory gravy.</p>
+            </div>
+            <div class="slide-image">
+              <img src="../images/featureditem3.png" alt="Crunch Bowl">
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-content">
+              <h1>FAMILY BUCKET MEAL</h1>
+              <p>Perfect for sharing! Features our signature crispy chicken bucket paired with large, creamy mashed potato and fixins.</p>
+            </div>
+            <div class="slide-image">
+              <img src="../images/featureditem4.png" alt="Family Meal Bucket">
+            </div>
+          </div>
+        </div>
+
+        <button class="nav-btn prev">&#10094;</button>
+        <button class="nav-btn next">&#10095;</button>
+
+        <div class="dots-container">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+          <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+        <a href="../order/order.html" class="order_now-btn"> Order now</a>
+      </div>
+      
+      <div class="other-container">
+
+        <section class="section-block deals-section">
+          <h2 class="section-title">FEATURED DEALS & PROMOS</h2>
+          <div class="deals-grid">
+            <div class="deal-card">
+              <span class="deal-badge">Limited Time</span>
+              <h3>Wednesday Bucket Blast</h3>
+              <p>Get 20% off on all 6-piece chicken buckets every Wednesday when ordering online.</p>
+              <a href="../order/order.html" class="btn-deal">Claim Deal</a>
+            </div>
+            <div class="deal-card highlight">
+              <span class="deal-badge">Exclusive</span>
+              <h3>Free Delivery</h3>
+              <p>Enjoy free doorstep delivery on all orders over ₱500 using promo code <strong>KFCFREE</strong>.</p>
+              <a href="../order/order.html" class="btn-deal">Order Now</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block steps-section">
+          <h2 class="section-title">HOW TO ORDER</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-num">1</div>
+              <h3>Select Location</h3>
+              <p>Choose delivery or pickup from your nearest KFC branch.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">2</div>
+              <h3>Pick Your Favorites</h3>
+              <p>Customize your chicken pieces, sides, drinks, and desserts.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">3</div>
+              <h3>Enjoy Fresh Food</h3>
+              <p>Track your order in real-time as it arrives fresh and piping hot.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block app-banner">
+          <div class="app-banner-content">
+            <h2>ORDER FASTER WITH THE KFC APP</h2>
+            <p>Get exclusive app-only discounts, save your favorite meals, and track your delivery live.</p>
+            <div class="app-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.kfc.philippines&hl=en" class="btn-app">Google Play</a>
+              <a href="https://apps.apple.com/ph/app/kfc-philippines/id1500269190" class="btn-app">App Store</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bottom-container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h2 class="footer-logo">KFC</h2>
+          <p class="footer-desc">Finger Lickin' Good fried chicken, delivered right to your doorstep.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../menu/menu.html">Menu</a></li>
+            <li><a href="../order/order.html">Order Now</a></li>
+            <li><a href="../menu/menu.html">Promos & Deals</a></li>
+            <li><a href="../order/location.html">Find a Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/kfcphilippines">Facebook</a>
+            <a href="https://www.instagram.com/kfc/">Instagram</a>
+            <a href="https://x.com/kfc">Twitter</a>
+          </div>
+          <p class="hotline">Hotline: 8882-8888</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 G4 Wonder pets. This is a mock website for the CS 001A course.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
