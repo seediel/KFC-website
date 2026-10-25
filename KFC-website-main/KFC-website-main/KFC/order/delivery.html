@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delivery - KFC Philippines</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Work+Sans:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <iframe class="background-page" src="../home_page/index.html" title="KFC home page" tabindex="-1"></iframe>
+
+    <div class="overlay">
+      <div class="popup">
+        <div class="popup-header">
+          <a href="order.html" class="back" title="Back"><i class="fa-solid fa-chevron-left"></i></a>
+          <h2>Enter your address</h2>
+          <a href="../home_page/index.html" class="close-dark" title="Close"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+        <form action="../menu/menu.html">
+          <label for="address" class="field-label">Address</label>
+          <div class="input-box">
+            <input type="text" id="address" placeholder="Enter a location" required />
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </div>
+          <button type="submit" class="btn">Continue</button>
+        </form>
+
+        <a href="location.html" class="map-link"><i class="fa-solid fa-location-dot"></i> Set location on map</a>
+
+        <div class="stripes"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </body>
+</html>
