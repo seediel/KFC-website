@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Account - KFC Philippines</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Work+Sans:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <iframe class="background-page" src="../home_page/index.html" title="KFC home page" tabindex="-1"></iframe>
+
+    <div class="overlay">
+      <div class="popup">
+        <a href="../home_page/index.html" class="close" title="Close"><i class="fa-solid fa-xmark"></i></a>
+
+        <img src="https://cdn.tictuk.com/04d917c0-7bcd-6ced-acad-3e4db2bcbfd5/assets/logoDesktopHeader.svg" alt="KFC" class="popup-logo" />
+        <h3>Create your account</h3>
+
+        <form action="account.html">
+          <label for="first-name">First Name *</label>
+          <input type="text" id="first-name" required />
+
+          <label for="last-name">Last Name *</label>
+          <input type="text" id="last-name" required />
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required />
+
+          <label for="mobile">Mobile Number *</label>
+          <input type="tel" id="mobile" pattern="09[0-9]{9}" maxlength="11" title="11-digit mobile number, e.g. 09171234567" required />
+
+          <p class="agree">By creating an account, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a></p>
+
+          <button type="submit" class="btn">Create account</button>
+        </form>
+
+        <div class="or"><hr /> or <hr /></div>
+        <a href="sign_in.html" class="text-btn">I already have an account</a>
+      </div>
+    </div>
+  </body>
+</html>

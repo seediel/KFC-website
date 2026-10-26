@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign In - KFC Philippines</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Work+Sans:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <iframe class="background-page" src="../home_page/index.html" title="KFC home page" tabindex="-1"></iframe>
+
+    <div class="overlay">
+      <div class="popup">
+        <a href="../home_page/index.html" class="close" title="Close"><i class="fa-solid fa-xmark"></i></a>
+
+        <img src="https://cdn.tictuk.com/04d917c0-7bcd-6ced-acad-3e4db2bcbfd5/assets/logoDesktopHeader.svg" alt="KFC" class="popup-logo" />
+        <h3>Enter the code we sent to your phone</h3>
+        <p class="popup-text">We sent a 6-digit code to your mobile number by SMS.</p>
+
+        <form action="account.html">
+          <label for="code">Verification Code *</label>
+          <input type="text" id="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" title="6-digit code" required />
+
+          <button type="submit" class="btn">Verify and sign in</button>
+        </form>
+
+        <a href="verify.html" class="text-btn">Resend code</a>
+
+        <div class="or"><hr /> or <hr /></div>
+        <a href="create_account.html" class="text-btn">New to KFC? Create an account</a>
+      </div>
+    </div>
+  </body>
+</html>
